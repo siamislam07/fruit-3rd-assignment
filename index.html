@@ -11,7 +11,7 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/8a0ef931b5.js" crossorigin="anonymous"></script>
 
-    <!-- daisyui cdn linkups -->
+    <!-- Daisy cdn linkups -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,6 +19,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'hero-bg1': "url('./images/banner1.png')",
+                        'hero-bg2': "url('./images/banner2.png')",
+                        'hero-bg3': "url('./images/banner3.png')",
+                        'hero-bg4': "url('./images/banner4.png')",
+                    }
+                }
+            }
+        }
+    </script>
+
 
     <style>
         .font-lato {
@@ -28,11 +44,126 @@
 </head>
 
 <body class="font-lato ">
-<!-- header starts here -->
-<header>
-    
-</header>
-<!-- header ends here -->
+    <!-- header starts here -->
+    <header>
+        <div class="navbar bg-[#F85559] rounded-full max-w-screen-xl mx-auto px-5 md:px-16 lg:px-24 py-5 my-6">
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white font-medium text-lg">
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                </ul>
+            </div>
+            <div class="navbar-start justify-center">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost normal-case text-2xl text-white font-bold"><img src="./images/logo.png"
+                        alt="">Fruit Burst</a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="relative text-gray-600 focus-within:text-gray-400">
+                    <div class="relative text-gray-600 focus-within:text-gray-400 hidden lg:flex md:flex">
+                        <input type="search"
+                            class="py-2 pl-10 pr-4 rounded-full w-full bg-white border border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline"
+                            placeholder="Search">
+                        <div class="absolute top-0 left-0 mt-2 ml-3">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slider section  -->
+        </div>
+        <div class="carousel w-full">
+            <!-- slider 1 -->
+            <div id="slide1" class="carousel-item  relative w-full">
+                
+                <div class="hero min-h-screen bg-hero-bg1 ">
+                    <div class="hero-overlay bg-opacity-3"></div>
+                    <div class="hero-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="text-5xl font-extrabold text-white">Exotic tastes at your doorstep</h1>
+                            <p class="py-6 font-medium text-white">We supply highly quality organic products</p>
+                            <button class="btn bg-[#F85559] text-white border-none">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slider 2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="hero min-h-screen bg-hero-bg2">
+                    <div class="hero-overlay bg-opacity-3"></div>
+                    <div class="hero-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="text-5xl font-extrabold text-white">Exotic tastes at your doorstep</h1>
+                            <p class="py-6 font-medium text-white">We supply highly quality organic products</p>
+                            <button class="btn bg-[#F85559] text-white border-none">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slider 3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="hero min-h-screen bg-hero-bg3">
+                    <div class="hero-overlay bg-opacity-3"></div>
+                    <div class="hero-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="text-5xl font-extrabold text-white">Exotic tastes at your doorstep</h1>
+                            <p class="py-6 font-medium text-white">We supply highly quality organic products</p>
+                            <button class="btn bg-[#F85559] text-white border-none">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <!-- slider 4 -->
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="hero min-h-screen bg-hero-bg4">
+                    <div class="hero-overlay bg-opacity-3"></div>
+                    <div class="hero-content text-center">
+                        <div class="max-w-md">
+                            <h1 class="text-5xl font-extrabold text-white">Exotic tastes at your doorstep</h1>
+                            <p class="py-6 font-medium text-white">We supply highly quality organic products</p>
+                            <button class="btn bg-[#F85559] text-white border-none">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends here -->
 
 
 
